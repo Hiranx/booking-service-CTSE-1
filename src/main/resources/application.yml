@@ -2,7 +2,7 @@ spring:
   application:
     name: booking
   mongodb:
-    uri: mongodb+srv://hiran:1234@cluster0.4sfue.mongodb.net/vehicle_bookings?retryWrites=true&w=majority
+    uri: mongodb+srv://hiran9204:1234@cluster0.4sfue.mongodb.net/?appName=Cluster0
 
 server:
   port: 8082
