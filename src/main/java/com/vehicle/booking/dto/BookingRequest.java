@@ -1,37 +1,18 @@
-package com.vehicle.booking.model;
+package com.vehicle.booking.dto;
 
-
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
 
 
-@Document(collection = "bookings")
-public class Booking {
-
-    @Id
-    private String id;
+public class BookingRequest {
 
     private String userId;
     private String vehicleId;
-
     private LocalDate startDate;
     private LocalDate endDate;
-
-    private double totalPrice;
-
-    private String status;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getUserId() {
         return userId;
@@ -63,21 +44,5 @@ public class Booking {
 
     public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
-    }
-
-    public double getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 }
